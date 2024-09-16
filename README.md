@@ -1,1 +1,1 @@
-# Cloud-Security-Automation-AWS-Threat-Detection-and-Notification
+# Cloud Security Automation AWS Threat Detection and Notification
