@@ -18,7 +18,7 @@ This project implements an automated **AWS Threat Detection and Alerting System*
 ## Architecture
 The architecture of the AWS-based Threat Detection and Alerting System is shown below:
 
-![Architecture Diagram](./image/architecture.png)
+![Architecture Diagram](./Images/Architecture1.png)
 
 ## Prerequisites
 - AWS account
