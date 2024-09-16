@@ -13,8 +13,16 @@
 - [Contact](#contact)
 
 ## Overview
-This project implements an automated **AWS Threat Detection and Alerting System** using **AWS GuardDuty**, **EventBridge**, **Lambda**, and **AmazonSNS**. It provides real-time monitoring of security threats and sends notifications to the security team whenever high-severity findings are detected. The infrastructure is provisioned and managed with **Terraform** for easy deployment and scalability.
+This project implements an **AWS-based Threat Detection** **and Alerting System** designed to automatically detect and notify security teams of high-severity threats in a cloud environment. Leveraging **AWS GuardDuty** for real-time threat detection, **EventBridge** for event-driven triggers, **AWS Lambda** for processing findings, and **AmazonSNS** for sending email notifications, this solution enhances cloud security by providing automated monitoring and alerts.
 
+The infrastructure is provisioned and managed using **Terraform**, enabling easy and scalable deployment.
+
+Key Features:
+- **Real-Time Threat Detection**: AWS GuardDuty continuously monitors the environment for malicious activities and security threats.
+- **Event-Driven Processing**: Amazon EventBridge captures high-severity findings from GuardDuty and triggers AWS Lambda functions for further processing.
+- **Automated Alerts**: AWS Lambda formats the findings into human-readable notifications and publishes them to Amazon SNS, which sends alerts via email to the security team.
+- **Monitoring and Logging**: AWS CloudWatch tracks the performance and logs of the Lambda function for audit and troubleshooting.
+This project demonstrates how automation can improve cloud security by streamlining the process of detecting and responding to security incidents in real-time.
 ## Architecture
 The architecture of the AWS-based Threat Detection and Alerting System is shown below:
 
