@@ -2,7 +2,7 @@
 ## Table of Contents
 - [Overview](#overview)
 - [Architecture](#architecture)
-- [Prerequisites](#prerequisites)
+- [Components](#Components)
 - [Deployment Steps](#deployment-steps)
 - [Testing the Setup](#testing-the-setup)
 - [Cleanup](#cleanup)
@@ -28,10 +28,16 @@ The architecture of the AWS-based Threat Detection and Alerting System is shown 
 
 ![Architecture Diagram](./Images/Architecture1.png)
 
-## Prerequisites
-- AWS account
-- Terraform installed
-...
+## Components
+
+| Component       | Description                                                                 |
+|-----------------|-----------------------------------------------------------------------------|
+| **AWS GuardDuty**   | Monitors your AWS environment for malicious activities and security threats. |
+| **Amazon EventBridge** | Captures high-severity findings from GuardDuty and triggers further actions. |
+| **AWS Lambda**   | Processes and formats threat data from EventBridge and sends notifications. |
+| **Amazon SNS**   | Sends email notifications to the security team based on Lambda's output.   |
+| **Amazon CloudWatch** | Logs and monitors the performance of the Lambda function.              |
+| **Terraform**    | Provisions and manages all AWS resources in this solution.                |
 
 ## Deployment Steps
 1. Clone the repository
