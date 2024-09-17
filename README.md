@@ -134,9 +134,11 @@ terraform plan
 terraform apply
 ```
 - Type **Yes** when prompted to confirm.
+
 8.**Confirm SNS Subscription**
-  -Check your email inbox for a confirmation message from AWS SNS.
-  -Click the "Confirm subscription" link in the email.
+  - Check your email inbox for a confirmation message from AWS SNS.
+  - Click the "Confirm subscription" link in the email.
+
 **Screenshot: SNS Subscription Confirmation Email**
 ![SNS Confrimation email](./Images/SNSConfirmation.jpg)
 
