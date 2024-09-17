@@ -162,11 +162,14 @@ terraform apply
 2.**Verifiy Email Notifications
   - Check the notification you get from the SNS topic
   - The email Should contain a formatted message with details about the GuardDuty findings.
+
 **Sample Email Notification**
+
 ![emailnotification](./Images/EmailNotifications.png)
 
 **Sample Email Content**
-![SampleEmailContent](./Images/SampleEmail.png}
+
+![SampleEmail](./Images/SampleEmail.png)
 
 ## Cleanup
 Instructions for cleaning up the resources...
