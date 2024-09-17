@@ -40,10 +40,74 @@ The architecture of the AWS-based Threat Detection and Alerting System is shown 
 | **Terraform**    | Provisions and manages all AWS resources in this solution.                |
 
 ## Deployment Steps
-1. Clone the repository
-2. Run `terraform init`
-3. Run `terraform apply`
-...
+1. **Install Required Tools**
+   Ensure that you have the following tools installed:
+   - AWS CLI: For interacting with AWS services.
+   - Terraform: For provisioning AWS infrastructure.
+   - Git: To manage the project repository.
+     
+2. **Clone the repositor**
+    ```bash
+   git clone https://github.com/yourusername/aws-threat-detection.git
+   cd aws-threat-detection
+
+3. **Prepare the Lambda Function**
+   - Create a file named lambda_function.py with the following content:
+ ```python
+import json
+import os
+import boto3
+
+sns_client = boto3.client('sns')
+sns_topic_arn = os.environ['SNS_TOPIC_ARN']
+
+def lambda_handler(event, context):
+    # Parse the GuardDuty finding
+    detail = event.get('detail', {})
+    finding_type = detail.get('type', 'Unknown')
+    severity = detail.get('severity', 'Unknown')
+    description = detail.get('description', 'No description provided')
+    region = detail.get('region', 'Unknown')
+    account = detail.get('accountId', 'Unknown')
+    time = detail.get('updatedAt', 'Unknown')
+    title = detail.get('title', 'GuardDuty Finding')
+
+    # Format the message
+    message = f"""
+    GuardDuty Finding Alert
+
+    Title: {title}
+    Type: {finding_type}
+    Severity: {severity}
+    Account ID: {account}
+    Region: {region}
+    Time: {time}
+
+    Description:
+    {description}
+
+    Recommendation:
+    Please review the finding in the AWS GuardDuty console and take appropriate action.
+
+    Link to Finding:
+    https://{region}.console.aws.amazon.com/guardduty/home?region={region}#/findings?macros=current&fId={detail.get('id', '')}
+    """
+
+    # Publish the message to SNS
+    response = sns_client.publish(
+        TopicArn=sns_topic_arn,
+        Subject=f"GuardDuty Alert: {title}",
+        Message=message
+    )
+
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Notification sent')
+    }
+```
+
+4.**Configure Terraform Variables**
+  - Update the "variables.tf" file to chnage the default value:
 
 ## Testing the Setup
 Explain how to test the deployment here...
