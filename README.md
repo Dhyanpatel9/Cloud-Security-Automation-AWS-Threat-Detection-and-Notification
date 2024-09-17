@@ -108,6 +108,33 @@ def lambda_handler(event, context):
 
 4.**Configure Terraform Variables**
   - Update the "variables.tf" file to chnage the default value:
+ ```python
+  variable "aws_region" {
+  description = "AWS region to deploy resources in"
+  type        = string
+  default     = "us-east-1"
+ }
+
+variable "email_address" {
+  description = "Email address to receive SNS notifications"
+  type        = string
+  default     = "dhyan7909@gmail.com" 
+}
+```
+5.**Initialize Terraform**
+```Bash
+terraform init
+```
+6.**Review the Execution Plan**
+```Bash
+terraform plan
+```
+7.**Apply the Configuration**
+```Bash
+terraform apply
+```
+- Type **Yes** when prompted to confirm.
+
 
 ## Testing the Setup
 Explain how to test the deployment here...
