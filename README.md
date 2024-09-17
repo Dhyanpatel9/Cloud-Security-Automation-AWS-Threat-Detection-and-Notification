@@ -144,7 +144,19 @@ terraform apply
 
 
 ## Testing the Setup
-Explain how to test the deployment here...
+1.**Generate Sample GuardDuty Findings
+ - Using AWS CLI:
+   ```python
+   aws guardduty create-sample-findings \
+      --detector-id $(terraform output -raw guardduty_detector_id) \
+      --finding-types "Recon:EC2/PortProbeUnprotectedPort" ```
+
+ - Using AWS Console:
+    - Navigate to GuardDuty > Settings
+    - Click on "Generate Sample findings."
+
+**Screenshot : Generating Sample Findings in AWS Console**
+
 
 ## Cleanup
 Instructions for cleaning up the resources...
