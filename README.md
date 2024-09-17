@@ -138,7 +138,7 @@ terraform apply
   -Check your email inbox for a confirmation message from AWS SNS.
   -Click the "Confirm subscription" link in the email.
 **Screenshot: SNS Subscription Confirmation Email**
-![SNS Confrimation email](./Images/SNS_Confirmation.jpg)
+![SNS Confrimation email](./Images/SNSConfirmation.jpg)
 
 
 ## Testing the Setup
