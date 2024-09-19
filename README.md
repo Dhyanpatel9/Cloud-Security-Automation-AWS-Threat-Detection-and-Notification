@@ -179,11 +179,33 @@ terraform apply
 **Screenshot: Lambda Function Logs**
 
 ![CloudWatch](./Images/CloudWatch.png)
+
+> **Note**: The logs show successful execution of the Lambda function.
+
 ## Cleanup
-Instructions for cleaning up the resources...
+To destroy the resources when they are no longer needed use:
+  
+  ` terraform destroy `
+
+Type `Yes` to confirm
 
 ## Cost Considerations
-Details on costs...
+   - **AWS GuardDuty:**
+       - **Free Trial:** 30-day free trial.
+       - **Charges**: Based on the volume of data processed after the trial.
+
+   - **AWS Lambda:**
+        - **Free Tier:** 1 million free requests per month
+        - **Charges:** Minimal for low invocation rates.
+  
+   - **Amazon SNS:**
+       
+        - **Email Notifications:** Low cost; charges may apply after certain thresholds.
+
+   - **EventBridge:**
+
+       - **Event:** Costs are based on the number of events processed.
+
 
 ## Conclusion
 Summarize your findings here...
