@@ -144,7 +144,7 @@ terraform apply
 
 
 ## Testing the Setup
-1.**Generate Sample GuardDuty Findings
+1.**Generate Sample GuardDuty Findings**
  - Using AWS CLI:
    ```python
    aws guardduty create-sample-findings \
@@ -172,9 +172,10 @@ terraform apply
 ![SampleEmail](./Images/SampleEmail.png)
 
 
-3.**Check Lembda Function Logs
- - In the AWS Console, navigate to **CloudWatch>Logs**.
- - Uder /aws/lambda/guardduty_formatter you can see log events
+3.**Check Lembda Function Logs**
+  - In the AWS Console, navigate to **CloudWatch>Logs**.
+  - Uder /aws/lambda/guardduty_formatter you can see log events
+
 **Screenshot: Lambda Function Logs**
 
 ![CloudWatch](./Images/CloudWatch.png)
