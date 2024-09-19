@@ -208,15 +208,21 @@ Type `Yes` to confirm
 
 
 ## Conclusion
-Summarize your findings here...
+
+In conclusion, this project outlines the implementation of an affordable threat detection solution using AWS services. By utilizing GuardDuty for detecting threats, Lambda for processing, and SNS for notifications, organizations can efficiently monitor their AWS environments and swiftly address critical security incidents.
 
 ## References
-Any references or links...
+- [AWS GuardDuty](https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html)
+- [AWS Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
+- [Amazon SNS Documentation](https://docs.aws.amazon.com/sns/latest/dg/welcome.html)
+- [Amazon EventBridge Documentation](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html)
+- [Terraform AWS Provider](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
+- [AWS Architecture Icons](https://aws.amazon.com/architecture/icons/)
 
 ## License
-Details about the license...
+This project is licensed under the MIT See the [LICENSE](LICENSE) file for details.
 
 ## Contact
-Information for reaching you...
+For any questions or suggestions, please contact [dhyan7909@gmail.com](dhyan7909@gmail.com)
 
 
