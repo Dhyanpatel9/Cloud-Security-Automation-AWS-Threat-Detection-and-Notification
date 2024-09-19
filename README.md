@@ -171,6 +171,13 @@ terraform apply
 
 ![SampleEmail](./Images/SampleEmail.png)
 
+
+3.**Check Lembda Function Logs
+ - In the AWS Console, navigate to **CloudWatch>Logs**.
+ - Uder /aws/lambda/guardduty_formatter you can see log events
+**Screenshot: Lambda Function Logs**
+
+![CloudWatch](./Images/CloudWatch.png)
 ## Cleanup
 Instructions for cleaning up the resources...
 
